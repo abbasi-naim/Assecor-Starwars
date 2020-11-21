@@ -8,6 +8,7 @@ import { StarwarsPageComponent } from './components/starwars-page/starwars-page.
 import { FilmePageComponent } from './components/filme-page/filme-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CharakterePageComponent } from './components/charaktere-page/charaktere-page.component';
+import { PlanetenPageComponent } from './components/planeten-page/planeten-page.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CharakterePageComponent } from './components/charaktere-page/charaktere
     NavbarComponent,
     StarwarsPageComponent,
     FilmePageComponent,
-    CharakterePageComponent
+    CharakterePageComponent,
+    PlanetenPageComponent
   ],
   imports: [
     BrowserModule,
