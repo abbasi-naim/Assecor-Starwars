@@ -1,1 +1,30 @@
-<p>filme-page works!</p>
+<div *ngIf="films.length == 0" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><fa-icon [icon]="faCog" class="fa-spin"></fa-icon> Loading...</h1>
+  </div>
+</div>
+<div *ngIf="!showDetail" class="container">
+<div class="card-deck">
+  <div class="row">
+  <div *ngFor="let film of films" class="col-md-4 col-xs-12">
+    <div class="card">
+    <img src="https://picsum.photos/seed/picsum/423/400" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{film.title}}</h5>
+      <p class="card-text">{{film.director}}</p>
+      <p class="card-text">{{film.producer}}</p>
+      <p class="card-text">{{film.release_date}}</p>
+      <p class="card-text btn" (click)="onShowDetail(film)"><small class="text-muted">Show detail...</small></p>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div *ngIf="showDetail">
+<p>{{selectedFilm.title}}</p>
+<a class="btn btn-primary btn-sm" *ngFor="let character of selectedFilm.characterDetails" [href]="character.url">{{character.name}}</a>
+<button (click) = "onHideDetail()"></button>
+
+</div>
