@@ -10,7 +10,10 @@
 <div *ngIf="!showDetail" class="container">
   <div class="card-deck">
     <div class="row">
-      <div *ngFor="let character of characters" class="col-md-4 col-xs-12">
+      <div
+        *ngFor="let character of characters | slice: 0:6"
+        class="col-md-4 col-xs-12"
+      >
         <div class="card">
           <img
             src="/assets/Charaktere-img/Unbenannt.png"
