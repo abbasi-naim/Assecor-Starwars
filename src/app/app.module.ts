@@ -9,7 +9,7 @@ import { FilmePageComponent } from './components/filme-page/filme-page.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CharakterePageComponent } from './components/charaktere-page/charaktere-page.component';
 import { PlanetenPageComponent } from './components/planeten-page/planeten-page.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,15 +18,16 @@ import { PlanetenPageComponent } from './components/planeten-page/planeten-page.
     StarwarsPageComponent,
     FilmePageComponent,
     CharakterePageComponent,
-    PlanetenPageComponent
+    PlanetenPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
