@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <a
     class="navbar-brand navbar-brand-starwars"
     [routerLink]="starWarsLinkEnabled ? 'starwars' : null"
@@ -6,9 +6,6 @@
   >
     <img
       src="/assets/Logo&Center-img/star.png"
-      width="83.14"
-      height="37.08"
-      style="opacity: 1"
       alt="Starwars Logo"
       loading="lazy"
     />
@@ -28,12 +25,16 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <!-- <a class="nav-link" routerLink="/starwars">Star Wars</a> -->
-        <a
-          class="nav-link"
-          [routerLink]="starWarsLinkEnabled ? 'starwars' : null"
-          [routerLinkActive]="starWarsLinkEnabled ? 'is_active' : 'is_disabled'"
-          >Star Wars</a
-        >
+        <span class="starwars">
+          <a
+            class="nav-link"
+            [routerLink]="starWarsLinkEnabled ? 'starwars' : null"
+            [routerLinkActive]="
+              starWarsLinkEnabled ? 'is_active' : 'is_disabled'
+            "
+            >StarWars</a
+          >
+        </span>
       </li>
       <li class="nav-item">
         <!-- <a class="nav-link" routerLink="/film">Filme</a> -->
