@@ -38,35 +38,41 @@
       </li>
       <li class="nav-item">
         <!-- <a class="nav-link" routerLink="/film">Filme</a> -->
-        <a
-          class="nav-link"
-          [routerLink]="filmLinkEnabled ? 'film' : null"
-          [routerLinkActive]="filmLinkEnabled ? 'is_active' : 'is_disabled'"
-          >Filme</a
-        >
+        <span class="filme">
+          <a
+            class="nav-link"
+            [routerLink]="filmLinkEnabled ? 'film' : null"
+            [routerLinkActive]="filmLinkEnabled ? 'is_active' : 'is_disabled'"
+            >Filme</a
+          >
+        </span>
       </li>
       <li class="nav-item">
-        <a
-          class="nav-link"
-          [routerLink]="characterLinkEnabled ? 'character' : null"
-          [routerLinkActive]="
-            characterLinkEnabled ? 'is_active' : 'is_disabled'
-          "
-          >Charaktere</a
-        >
+        <span class="charaktere">
+          <a
+            class="nav-link"
+            [routerLink]="characterLinkEnabled ? 'character' : null"
+            [routerLinkActive]="
+              characterLinkEnabled ? 'is_active' : 'is_disabled'
+            "
+            >Charaktere</a
+          >
+        </span>
       </li>
       <li class="nav-item">
-        <a
-          class="nav-link"
-          [routerLink]="planetLinkEnabled ? 'planet' : null"
-          [routerLinkActive]="planetLinkEnabled ? 'is_active' : 'is_disabled'"
-          >Planeten</a
-        >
+        <span class="planeten">
+          <a
+            class="nav-link"
+            [routerLink]="planetLinkEnabled ? 'planet' : null"
+            [routerLinkActive]="planetLinkEnabled ? 'is_active' : 'is_disabled'"
+            >Planeten</a
+          >
+        </span>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <div class="input-group">
-        <input class="form-control border-right-0" />
+        <input class="form-control border-right-1" />
         <span class="input-group-append bg-white">
           <button class="btn" type="button">
             <fa-icon [icon]="faSearch" class="fa-spin"></fa-icon>
