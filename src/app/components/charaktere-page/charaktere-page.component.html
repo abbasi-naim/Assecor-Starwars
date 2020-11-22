@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="display-4">
       <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
-      <i class="fa fa-cog fa-spin fa-2x"></i> <span>Character Loading...</span>
+      <i class="fa fa-cog fa-spin fa-2x"></i> <span>Loading Characters...</span>
     </h1>
   </div>
 </div>
@@ -41,7 +41,7 @@
     class="btn btn-primary btn-sm"
     *ngFor="let film of selectedCharacter.filmDetails"
     [href]="film.url"
-    >{{ film.name }}</a
+    >{{ film.title }}</a
   >
   <button (click)="onHideDetail()"></button>
 </div>
