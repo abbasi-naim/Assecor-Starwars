@@ -1,1 +1,44 @@
-<p>charaktere-page works!</p>
+<div *ngIf="characters.length == 0" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
+      <i class="fa fa-cog fa-spin fa-2x"></i> <span>Character Loading...</span>
+    </h1>
+  </div>
+</div>
+<p>Charaktere</p>
+<div *ngIf="!showDetail" class="container">
+  <div class="card-deck">
+    <div class="row">
+      <div *ngFor="let character of characters" class="col-md-4 col-xs-12">
+        <div class="card">
+          <img
+            src="/assets/Charaktere-img/Unbenannt.png"
+            class="card-img-top"
+            alt="film pic"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ character.name }}</h5>
+            <p class="card-text">{{ character.gender }}</p>
+            <p class="card-text">{{ character.hair_color }}</p>
+            <p class="card-text">{{ character.birth_year }}</p>
+            <p class="card-text btn" (click)="onShowDetail(character)">
+              <small class="text-muted">Show detail...</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showDetail">
+  <p>{{ selectedCharacter.name }}</p>
+  <a
+    class="btn btn-primary btn-sm"
+    *ngFor="let film of selectedCharacter.filmDetails"
+    [href]="film.url"
+    >{{ film.name }}</a
+  >
+  <button (click)="onHideDetail()"></button>
+</div>
