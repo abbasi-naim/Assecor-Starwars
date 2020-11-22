@@ -1,5 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand navbar-brand-starwars" routerLink="/starwars">
+  <a
+    class="navbar-brand navbar-brand-starwars"
+    [routerLink]="starWarsLinkEnabled ? 'starwars' : null"
+    [routerLinkActive]="starWarsLinkEnabled ? 'is_active' : 'is_disabled'"
+  >
     <img
       src="/assets/Logo&Center-img/star.png"
       width="83.14"
@@ -22,19 +26,41 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/starwars"
-          >Star Wars <span class="sr-only">(current)</span></a
+      <li class="nav-item">
+        <!-- <a class="nav-link" routerLink="/starwars">Star Wars</a> -->
+        <a
+          class="nav-link"
+          [routerLink]="starWarsLinkEnabled ? 'starwars' : null"
+          [routerLinkActive]="starWarsLinkEnabled ? 'is_active' : 'is_disabled'"
+          >Star Wars</a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/film">Filme</a>
+        <!-- <a class="nav-link" routerLink="/film">Filme</a> -->
+        <a
+          class="nav-link"
+          [routerLink]="filmLinkEnabled ? 'film' : null"
+          [routerLinkActive]="filmLinkEnabled ? 'is_active' : 'is_disabled'"
+          >Filme</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/character">Charaktere</a>
+        <a
+          class="nav-link"
+          [routerLink]="characterLinkEnabled ? 'character' : null"
+          [routerLinkActive]="
+            characterLinkEnabled ? 'is_active' : 'is_disabled'
+          "
+          >Charaktere</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/planet">Planeten</a>
+        <a
+          class="nav-link"
+          [routerLink]="planetLinkEnabled ? 'planet' : null"
+          [routerLinkActive]="planetLinkEnabled ? 'is_active' : 'is_disabled'"
+          >Planeten</a
+        >
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

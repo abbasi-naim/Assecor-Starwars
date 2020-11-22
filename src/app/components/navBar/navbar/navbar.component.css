@@ -1,0 +1,14 @@
+.nav-link.is_disabled {
+  cursor: pointer;
+}
+
+.nav-link.is_active {
+  cursor: default;
+}
+
+.navbar-brand.is_disabled {
+  cursor: pointer;
+}
+.navbar-brand.is_active {
+  cursor: default;
+}
