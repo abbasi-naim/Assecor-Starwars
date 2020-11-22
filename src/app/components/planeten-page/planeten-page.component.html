@@ -1,1 +1,48 @@
+<div *ngIf="planets.length == 0" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
+      <i class="fa fa-cog fa-spin fa-2x"></i> <span>Loading Planets...</span>
+    </h1>
+  </div>
+</div>
 <p>planeten-page works!</p>
+<div *ngIf="!showDetail" class="container">
+  <div class="card-deck">
+    <div class="row">
+      <!--Add slice to show limited items on each page-->
+      <div
+        *ngFor="let planet of planets | slice: 0:6"
+        class="col-md-4 col-xs-12"
+      >
+        <div class="card">
+          <img
+            src="/assets/Planeten-img/Unbenannt.png"
+            class="card-img-top"
+            alt="planet pic"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ planet.name }}</h5>
+            <p class="card-text">{{ planet.population }}</p>
+            <p class="card-text">{{ planet.rotation_period }}</p>
+            <p class="card-text">{{ planet.orbital_period }}</p>
+            <p class="card-text btn" (click)="onShowDetail(planet)">
+              <small class="text-muted">Show detail...</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showDetail">
+  <p>{{ selectedPlanet.name }}</p>
+  <a
+    class="btn btn-primary btn-sm"
+    *ngFor="let film of selectedPlanet.filmDetails"
+    [href]="film.url"
+    >{{ film.title }}</a
+  >
+  <button (click)="onHideDetail()"></button>
+</div>
