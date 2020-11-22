@@ -33,6 +33,7 @@ export class SwapiDataService {
     return this.httpClient.get(this.PLANET_REST_API_URL);
   }
 
+  //Add Function to get URL Address by Endpoints
   public getByUrl(url) {
     return this.httpClient.get(url);
   }
