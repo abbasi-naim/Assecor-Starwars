@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   animations: [
     // animation triggers go here
   ],
+  template: '<app-footer></app-footer>',
 })
 export class AppComponent {
   title = 'Assecor-Frontend';

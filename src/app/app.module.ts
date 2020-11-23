@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CharakterePageComponent } from './components/charaktere-page/charaktere-page.component';
 import { PlanetenPageComponent } from './components/planeten-page/planeten-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FilmePageComponent,
     CharakterePageComponent,
     PlanetenPageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
