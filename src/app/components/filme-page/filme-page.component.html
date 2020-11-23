@@ -6,22 +6,25 @@
     </h1>
   </div>
 </div>
-<p>Filme</p>
+<p class="text-center"><span class="title">Filme</span></p>
 <div *ngIf="!showDetail" class="container">
   <div class="card-deck">
     <div class="row">
-      <div *ngFor="let film of films" class="col-md-4 col-xs-12">
+      <div *ngFor="let film of films" class="col-md-4 col-xs-12 p-3">
         <div class="card">
           <img
-            src="/assets/Filme-img/Unbenannt.png"
             class="card-img-top"
+            src="/assets/Filme-img/Unbenannt.png"
             alt="film pic"
           />
           <div class="card-body">
             <h5 class="card-title">{{ film.title }}</h5>
-            <p class="card-text">{{ film.director }}</p>
-            <p class="card-text">{{ film.producer }}</p>
-            <p class="card-text">{{ film.release_date }}</p>
+            <span class="card-text"
+              >Director: {{ film.director }} Produzenten:
+              {{ film.producer }} Erscheinungsdatum: {{ film.release_date }}
+            </span>
+            <!-- <p class="card-text">{{ film.producer }}</p> -->
+            <!-- <p class="card-text">{{ film.release_date }}</p> -->
             <p class="card-text btn" (click)="onShowDetail(film)">
               <small class="text-muted">Show detail...</small>
             </p>
