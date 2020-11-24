@@ -25,9 +25,14 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ character.name }}</h5>
-            <p class="card-text">{{ character.gender }}</p>
+            <span class="card-text"
+              >Gender: {{ character.gender }} Height:
+              {{ character.height }} BirthYear:
+              {{ character.birth_year }}
+            </span>
+            <!-- <p class="card-text">{{ character.gender }}</p>
             <p class="card-text">{{ character.hair_color }}</p>
-            <p class="card-text">{{ character.birth_year }}</p>
+            <p class="card-text">{{ character.birth_year }}</p> -->
             <p class="card-text btn" (click)="onShowDetail(character)">
               <small class="text-muted">Show More</small>
             </p>
