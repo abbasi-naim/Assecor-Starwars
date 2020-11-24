@@ -2,11 +2,14 @@
   <div class="container">
     <h1 class="display-4">
       <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
-      <i class="fa fa-cog fa-spin fa-2x"></i> <span>Loading Films...</span>
+      <i class="fa fa-cog fa-spin fa-2x"></i>
+      <span>Loading {{ pageTitel }}...</span>
     </h1>
   </div>
 </div>
-<p class="text-center"><span class="title">Filme</span></p>
+<p class="text-center">
+  <span class="title">{{ pageTitel }}</span>
+</p>
 <div *ngIf="!showDetail" class="container">
   <div class="card-deck">
     <div class="row">

@@ -11,6 +11,7 @@ export class CharakterePageComponent implements OnInit {
   characters = [];
   showDetail = false;
   selectedCharacter = { filmDetails: [] };
+  pageTitel = 'Charaktere';
   constructor(private dataService: SwapiDataService) {}
 
   ngOnInit() {

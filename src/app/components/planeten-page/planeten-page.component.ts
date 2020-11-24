@@ -10,6 +10,7 @@ export class PlanetenPageComponent implements OnInit {
   planets = [];
   showDetail = false;
   selectedPlanet = { filmDetails: [] };
+  pageTitel = 'Planeten';
   constructor(private dataService: SwapiDataService) {}
 
   ngOnInit() {
