@@ -4,6 +4,7 @@
 
 .nav-link.is_active {
   cursor: default;
+  text-decoration: underline;
 }
 
 .navbar-brand.is_disabled {
