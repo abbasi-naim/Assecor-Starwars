@@ -1,55 +1,57 @@
-<div *ngIf="characters.length == 0" class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">
-      <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
-      <i class="fa fa-cog fa-spin fa-2x"></i>
-      <span>Loading {{ pageTitel }}...</span>
-    </h1>
+<div [@Tap]>
+  <div *ngIf="characters.length == 0" class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">
+        <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
+        <i class="fa fa-cog fa-spin fa-2x"></i>
+        <span>Loading {{ pageTitel }}...</span>
+      </h1>
+    </div>
   </div>
-</div>
-<p class="text-center">
-  <span class="title">{{ pageTitel }}</span>
-</p>
-<div *ngIf="!showDetail" class="container">
-  <div class="card-deck">
-    <div class="row">
-      <div
-        *ngFor="let character of characters | slice: 0:6"
-        class="col-md-4 col-xs-12 p-3"
-      >
-        <div class="card">
-          <img
-            src="/assets/Charaktere-img/Unbenannt.png"
-            class="card-img-top"
-            alt="character pic"
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ character.name }}</h5>
-            <span class="card-text"
-              >Gender: {{ character.gender }} Height:
-              {{ character.height }} BirthYear:
-              {{ character.birth_year }}
-            </span>
-            <!-- <p class="card-text">{{ character.gender }}</p>
+  <p class="text-center">
+    <span class="title">{{ pageTitel }}</span>
+  </p>
+  <div *ngIf="!showDetail" class="container">
+    <div class="card-deck">
+      <div class="row">
+        <div
+          *ngFor="let character of characters | slice: 0:6"
+          class="col-md-4 col-xs-12 p-3"
+        >
+          <div class="card">
+            <img
+              src="/assets/Charaktere-img/Unbenannt.png"
+              class="card-img-top"
+              alt="character pic"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ character.name }}</h5>
+              <span class="card-text"
+                >Gender: {{ character.gender }} Height:
+                {{ character.height }} BirthYear:
+                {{ character.birth_year }}
+              </span>
+              <!-- <p class="card-text">{{ character.gender }}</p>
             <p class="card-text">{{ character.hair_color }}</p>
             <p class="card-text">{{ character.birth_year }}</p> -->
-            <p class="card-text btn" (click)="onShowDetail(character)">
-              <small class="text-muted">Show More</small>
-            </p>
+              <p class="card-text btn" (click)="onShowDetail(character)">
+                <small class="text-muted">Show More</small>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div *ngIf="showDetail">
-  <p>{{ selectedCharacter.name }}</p>
-  <a
-    class="btn btn-primary btn-sm"
-    *ngFor="let film of selectedCharacter.filmDetails"
-    [href]="film.url"
-    >{{ film.title }}</a
-  >
-  <button (click)="onHideDetail()"></button>
+  <div *ngIf="showDetail">
+    <p>{{ selectedCharacter.name }}</p>
+    <a
+      class="btn btn-primary btn-sm"
+      *ngFor="let film of selectedCharacter.filmDetails"
+      [href]="film.url"
+      >{{ film.title }}</a
+    >
+    <button (click)="onHideDetail()"></button>
+  </div>
 </div>
