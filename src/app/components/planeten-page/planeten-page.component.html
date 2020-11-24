@@ -26,9 +26,14 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ planet.name }}</h5>
-            <p class="card-text">{{ planet.population }}</p>
+            <span class="card-text"
+              >Rotation Period: {{ planet.rotation_period }} SurfaceWater:
+              {{ planet.surface_water }} Climate:
+              {{ planet.climate }}
+            </span>
+            <!-- <p class="card-text">{{ planet.population }}</p>
             <p class="card-text">{{ planet.rotation_period }}</p>
-            <p class="card-text">{{ planet.orbital_period }}</p>
+            <p class="card-text">{{ planet.orbital_period }}</p> -->
             <p class="card-text btn" (click)="onShowDetail(planet)">
               <small class="text-muted">Show More</small>
             </p>
