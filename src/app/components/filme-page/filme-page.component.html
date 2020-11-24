@@ -1,50 +1,52 @@
-<div *ngIf="films.length == 0" class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">
-      <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
-      <i class="fa fa-cog fa-spin fa-2x"></i>
-      <span>Loading {{ pageTitel }}...</span>
-    </h1>
+<div [@Tap]>
+  <div *ngIf="films.length == 0" class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">
+        <!-- <fa-icon [icon]="faCog" class="fa fa-cog fa-spin fa-1x fa-fw"></fa-icon> Loading... -->
+        <i class="fa fa-cog fa-spin fa-2x"></i>
+        <span>Loading {{ pageTitel }}...</span>
+      </h1>
+    </div>
   </div>
-</div>
-<p class="text-center">
-  <span class="title">{{ pageTitel }}</span>
-</p>
-<div *ngIf="!showDetail" class="container">
-  <div class="card-deck">
-    <div class="row">
-      <div *ngFor="let film of films" class="col-md-4 col-xs-12 p-3">
-        <div class="card">
-          <img
-            class="card-img-top"
-            src="/assets/Filme-img/Unbenannt.png"
-            alt="film pic"
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ film.title }}</h5>
-            <span class="card-text"
-              >Director: {{ film.director }} Produzenten:
-              {{ film.producer }} Erscheinungsdatum: {{ film.release_date }}
-            </span>
-            <!-- <p class="card-text">{{ film.producer }}</p> -->
-            <!-- <p class="card-text">{{ film.release_date }}</p> -->
-            <p class="card-text btn" (click)="onShowDetail(film)">
-              <small class="text-muted">Show More</small>
-            </p>
+  <p class="text-center">
+    <span class="title">{{ pageTitel }}</span>
+  </p>
+  <div *ngIf="!showDetail" class="container">
+    <div class="card-deck">
+      <div class="row">
+        <div *ngFor="let film of films" class="col-md-4 col-xs-12 p-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="/assets/Filme-img/Unbenannt.png"
+              alt="film pic"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ film.title }}</h5>
+              <span class="card-text"
+                >Director: {{ film.director }} Produzenten:
+                {{ film.producer }} Erscheinungsdatum: {{ film.release_date }}
+              </span>
+              <!-- <p class="card-text">{{ film.producer }}</p> -->
+              <!-- <p class="card-text">{{ film.release_date }}</p> -->
+              <p class="card-text btn" (click)="onShowDetail(film)">
+                <small class="text-muted">Show More</small>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div *ngIf="showDetail">
-  <p>{{ selectedFilm.title }}</p>
-  <a
-    class="btn btn-primary btn-sm"
-    *ngFor="let character of selectedFilm.characterDetails"
-    [href]="character.url"
-    >{{ character.name }}</a
-  >
-  <button (click)="onHideDetail()"></button>
+  <div *ngIf="showDetail">
+    <p>{{ selectedFilm.title }}</p>
+    <a
+      class="btn btn-primary btn-sm"
+      *ngFor="let character of selectedFilm.characterDetails"
+      [href]="character.url"
+      >{{ character.name }}</a
+    >
+    <button (click)="onHideDetail()"></button>
+  </div>
 </div>
