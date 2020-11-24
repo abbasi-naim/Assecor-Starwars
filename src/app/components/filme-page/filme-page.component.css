@@ -25,3 +25,8 @@
 .card-body {
   border: #f5f5f5;
 }
+
+.text-muted {
+  color: #10172c !important;
+  font: normal normal bold 12px/14px Roboto;
+}
