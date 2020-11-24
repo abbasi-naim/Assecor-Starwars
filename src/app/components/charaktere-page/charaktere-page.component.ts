@@ -1,57 +1,13 @@
-import { transAnimation } from './../../animations';
+import { dissolve } from './../../animations';
 import { SwapiDataService } from './../../swapi-data.service';
 import { Component, OnInit } from '@angular/core';
-import {
-  trigger,
-  animate,
-  transition,
-  style,
-  useAnimation,
-} from '@angular/animations';
+
 @Component({
   selector: 'app-charaktere-page',
   templateUrl: './charaktere-page.component.html',
   styleUrls: ['./charaktere-page.component.css'],
-  animations: [
-    trigger('Tap', [
-      // The '* => *' will trigger the animation to change between any two states
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('0.3s'),
-        style({ opacity: 1 }),
-      ]),
-      transition(':leave', [
-        style({ opacity: 1 }),
-        animate('0.3s ease-out'),
-        style({ opacity: 0 }),
-      ]),
-    ]),
-  ],
+  animations: [dissolve],
 })
-//   animations: [
-//     trigger('Tap', [
-//       // The '* => *' will trigger the animation to change between any two states
-//       transition(':enter', [
-//         useAnimation(transAnimation, {
-//           params: {
-//             opacityIn: 0,
-//             time: '6s',
-//             opacityOut: 1,
-//           },
-//         }),
-//       ]),
-//       transition(':leave', [
-//         useAnimation(transAnimation, {
-//           params: {
-//             opacityOut: 1,
-//             time: '6s',
-//             opacityIn: 0,
-//           },
-//         }),
-//       ]),
-//     ]),
-//   ],
-// })
 export class CharakterePageComponent implements OnInit {
   characters = [];
   showDetail = false;
