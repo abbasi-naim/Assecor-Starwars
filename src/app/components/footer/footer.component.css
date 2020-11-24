@@ -1,9 +1,7 @@
-.fixed-height {
-  top: 1350px;
+.opacity-5 {
   height: 50px;
   width: 100%;
-  bottom: 0px;
-  opacity: 1;
   border: 1px solid #f5f5f5;
   padding-left: 120px;
+  color: #bbbbbb;
 }
