@@ -1,34 +1,13 @@
-import { AppRoutingModule } from './../../app-routing.module';
+import { dissolve } from './../../animations';
 import { SwapiDataService } from './../../swapi-data.service';
 import { Component, OnInit } from '@angular/core';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
-import {
-  trigger,
-  animate,
-  transition,
-  style,
-  useAnimation,
-} from '@angular/animations';
 
 @Component({
   selector: 'app-filme-page',
   templateUrl: './filme-page.component.html',
   styleUrls: ['./filme-page.component.css'],
-  animations: [
-    trigger('Tap', [
-      // The '* => *' will trigger the animation to change between any two states
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('0.3s'),
-        style({ opacity: 1 }),
-      ]),
-      transition(':leave', [
-        style({ opacity: 1 }),
-        animate('0.3s ease-out'),
-        style({ opacity: 0 }),
-      ]),
-    ]),
-  ],
+  animations: [dissolve],
 })
 export class FilmePageComponent implements OnInit {
   films = [];
@@ -45,7 +24,7 @@ export class FilmePageComponent implements OnInit {
       this.films = data.results;
     });
   }
-
+  // when more button on every cards clicked it calls onShowDetail function to show details
   onShowDetail(t) {
     let characterDetails = [];
     this.selectedFilm = t;
@@ -59,7 +38,8 @@ export class FilmePageComponent implements OnInit {
     this.selectedFilm.characterDetails = characterDetails;
     console.log(this.selectedFilm.characterDetails);
   }
-
+  /*when hide button on datails page clicked it calls 
+  onHideDetail function to go back to main page and hide details*/
   onHideDetail() {
     this.showDetail = false;
   }
