@@ -49,7 +49,28 @@
       </span>
     </div>
 
-    <p>{{ detailsTitle }}</p>
+    <div class="row">
+      <div class="column">
+        <h4>{{ detailsTitle }}</h4>
+        <span
+          ><h5>Director:</h5>
+          <h6>{{ selectedFilm.director }}</h6>
+          <br />
+          <h5>Producer:</h5>
+          <h6>{{ selectedFilm.producer }}</h6>
+          <br />
+          <h5>ReleaseDate:</h5>
+          <h6>{{ selectedFilm.release_date }}</h6>
+        </span>
+        <h6>{{ selectedFilm.opening_crawl }}</h6>
+      </div>
+      <div class="column"></div>
+      <div class="column">
+        <img src="/assets/Filme-img/Unbenannt.png" alt="details-img" />
+      </div>
+    </div>
+    <p>Charaktere:</p>
+
     <a
       class="btn btn-primary btn-sm"
       *ngFor="let character of selectedFilm.characterDetails | slice: 0:5"
