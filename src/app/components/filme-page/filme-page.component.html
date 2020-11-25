@@ -70,13 +70,17 @@
       </div>
     </div>
     <p>Charaktere:</p>
+    <div class="mat-button-row">
+      <a
+        class="mat-raised-button"
+        mat-raised-button
+        *ngFor="let character of selectedFilm.characterDetails | slice: 0:5"
+        [href]="character.url"
+        >{{ character.name }}</a
+      >
+    </div>
 
-    <a
-      class="btn btn-primary btn-sm"
-      *ngFor="let character of selectedFilm.characterDetails | slice: 0:5"
-      [href]="character.url"
-      >{{ character.name }}</a
-    >
-    <button (click)="onHideDetail()"></button>
+    <!-- to go back to main page make below code uncomment -->
+    <!-- <button (click)="onHideDetail()"></button> -->
   </div>
 </div>

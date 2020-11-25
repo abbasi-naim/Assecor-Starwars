@@ -86,3 +86,9 @@
   clear: both;
   display: table;
 }
+
+.mat-button-row .mat-raised-button {
+  border-radius: 1px;
+  background-color: #bbbbbb;
+  margin-right: 15px;
+}
