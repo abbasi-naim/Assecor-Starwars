@@ -30,7 +30,7 @@
               <!-- <p class="card-text">{{ film.producer }}</p> -->
               <!-- <p class="card-text">{{ film.release_date }}</p> -->
               <p class="card-text btn" (click)="onShowDetail(film)">
-                <small class="text-muted">Show More</small>
+                <small class="text-muted">{{ showMore }}</small>
               </p>
             </div>
           </div>
@@ -41,6 +41,7 @@
 
   <div *ngIf="showDetail">
     <p>{{ selectedFilm.title }}</p>
+    <p>{{ detailsTitle }}</p>
     <a
       class="btn btn-primary btn-sm"
       *ngFor="let character of selectedFilm.characterDetails"
