@@ -16,6 +16,7 @@ export class FilmePageComponent implements OnInit {
   showDetail = false;
   selectedFilm = { characterDetails: [] };
   pageTitel = 'Filme';
+  detailPageTitle = 'Filmdetails';
   detailsTitle = detailsTitle;
   showMore = showMore;
 
@@ -39,7 +40,8 @@ export class FilmePageComponent implements OnInit {
       });
     });
     this.selectedFilm.characterDetails = characterDetails;
-    console.log(this.selectedFilm.characterDetails);
+    //add this code to not showing page titel on details page
+    this.pageTitel = '';
   }
   /*when hide button on datails page clicked it calls 
   onHideDetail function to go back to main page and hide details*/

@@ -40,7 +40,15 @@
   </div>
 
   <div *ngIf="showDetail" [@Tap]>
-    <p>{{ selectedFilm.title }}</p>
+    <div class="top-details text-center">
+      <span>
+        <h4>{{ detailPageTitle }}</h4>
+        <hr />
+        <h1>{{ selectedFilm.title }}</h1>
+        <h4>Episode {{ selectedFilm.episode_id }}</h4>
+      </span>
+    </div>
+
     <p>{{ detailsTitle }}</p>
     <a
       class="btn btn-primary btn-sm"
