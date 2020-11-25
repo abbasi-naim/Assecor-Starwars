@@ -14,8 +14,8 @@
   <div *ngIf="!showDetail" class="container">
     <div class="card-deck">
       <div class="row">
-        <div *ngFor="let film of films" class="col-md-4 col-xs-12 p-3">
-          <div class="card">
+        <div *ngFor="let film of films" class="col-md-4 col-xs-12 mt-3 p-3">
+          <div class="card h-100">
             <img
               class="card-img-top"
               src="/assets/Filme-img/Unbenannt.png"
@@ -23,7 +23,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">{{ film.title }}</h5>
-              <span class="card-text"
+              <span class="card-text d-flex align-items-stretch"
                 >Director: {{ film.director }} Produzenten:
                 {{ film.producer }} Erscheinungsdatum: {{ film.release_date }}
               </span>
