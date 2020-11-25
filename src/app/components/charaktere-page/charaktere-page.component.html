@@ -46,6 +46,8 @@
 
   <div *ngIf="showDetail">
     <p>{{ selectedCharacter.name }}</p>
+
+    <p>{{ detailsTitle }}</p>
     <a
       class="btn btn-primary btn-sm"
       *ngFor="let film of selectedCharacter.filmDetails"

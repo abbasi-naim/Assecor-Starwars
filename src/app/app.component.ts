@@ -12,3 +12,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Assecor-Frontend';
 }
+
+//Added fixed value to reuse it on every components
+export let detailsTitle = 'Details:';
