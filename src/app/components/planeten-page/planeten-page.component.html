@@ -36,7 +36,7 @@
             <p class="card-text">{{ planet.rotation_period }}</p>
             <p class="card-text">{{ planet.orbital_period }}</p> -->
               <p class="card-text btn" (click)="onShowDetail(planet)">
-                <small class="text-muted">Show More</small>
+                <small class="text-muted">{{ showMore }}</small>
               </p>
             </div>
           </div>
@@ -47,6 +47,7 @@
 
   <div *ngIf="showDetail">
     <p>{{ selectedPlanet.name }}</p>
+    <p>{{ detailsTitle }}</p>
     <a
       class="btn btn-primary btn-sm"
       *ngFor="let film of selectedPlanet.filmDetails"
