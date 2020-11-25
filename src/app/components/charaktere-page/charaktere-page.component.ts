@@ -1,4 +1,4 @@
-import { detailsTitle } from './../../app.component';
+import { detailsTitle, showMore } from './../../app.component';
 import { dissolve } from './../../animations';
 import { SwapiDataService } from './../../swapi-data.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,6 +15,7 @@ export class CharakterePageComponent implements OnInit {
   selectedCharacter = { filmDetails: [] };
   pageTitel = 'Charaktere';
   detailsTitle = detailsTitle;
+  showMore = showMore;
   constructor(private dataService: SwapiDataService) {}
 
   ngOnInit() {

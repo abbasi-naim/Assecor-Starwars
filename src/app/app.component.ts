@@ -15,3 +15,4 @@ export class AppComponent {
 
 //Added fixed value to reuse it on every components
 export let detailsTitle = 'Details:';
+export let showMore = 'Show More';
