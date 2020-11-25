@@ -39,12 +39,12 @@
     </div>
   </div>
 
-  <div *ngIf="showDetail">
+  <div *ngIf="showDetail" [@Tap]>
     <p>{{ selectedFilm.title }}</p>
     <p>{{ detailsTitle }}</p>
     <a
       class="btn btn-primary btn-sm"
-      *ngFor="let character of selectedFilm.characterDetails"
+      *ngFor="let character of selectedFilm.characterDetails | slice: 0:5"
       [href]="character.url"
       >{{ character.name }}</a
     >
