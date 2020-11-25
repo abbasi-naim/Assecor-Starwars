@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <div *ngIf="showDetail">
+  <div *ngIf="showDetail" [@Tap]>
     <p>{{ selectedPlanet.name }}</p>
     <p>{{ detailsTitle }}</p>
     <a
