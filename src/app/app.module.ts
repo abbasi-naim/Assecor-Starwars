@@ -11,6 +11,7 @@ import { CharakterePageComponent } from './components/charaktere-page/charaktere
 import { PlanetenPageComponent } from './components/planeten-page/planeten-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HttpClientModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
