@@ -96,7 +96,13 @@
           [href]="character.url"
           >{{ character.name }}</a
         >
-        <button class="mat-dott-button" mat-raised-button>...</button>
+        <button
+          class="mat-dott-button"
+          mat-raised-button
+          (click)="openDialog()"
+        >
+          ...
+        </button>
       </div>
     </div>
 
