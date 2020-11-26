@@ -36,54 +36,6 @@ img {
   padding-left: 10px;
 }
 
-/* .navbar .starwars a.nav-link {
-  top: 58px;
-  left: 440px;
-  width: 60px;
-  height: 17px;
-  text-align: left;
-  font: normal normal normal 14px/17px Roboto;
-  letter-spacing: 0px;
-  color: #10172c;
-  opacity: 1;
-} */
-
-/* .navbar .filme a.nav-link {
-  top: 58px;
-  left: 550px;
-  width: 34px;
-  height: 17px;
-  text-align: left;
-  font: normal normal normal 14px/17px Roboto;
-  letter-spacing: 0px;
-  color: #10172c;
-  opacity: 1;
-} */
-
-/* .navbar .charaktere a.nav-link {
-  top: 58px;
-  left: 635px;
-  width: 68px;
-  height: 17px;
-  text-align: left;
-  font: normal normal normal 14px/17px Roboto;
-  letter-spacing: 0px;
-  color: #10172c;
-  opacity: 1;
-} */
-
-/* .navbar .planeten a.nav-link {
-  top: 58px;
-  left: 753px;
-  width: 55px;
-  height: 17px;
-  text-align: left;
-  font: normal normal normal 14px/17px Roboto;
-  letter-spacing: 0px;
-  color: #10172c;
-  opacity: 1;
-} */
-
 input.form-control {
   border: 1px solid #f5f5f5;
 }

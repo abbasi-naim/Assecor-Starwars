@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div *ngIf="showDetail" [@Tap]>
+  <div *ngIf="showDetail" [@Tap] class="container">
     <div class="top-details text-center">
       <span>
         <h4>{{ detailPageTitle }}</h4>
@@ -49,39 +49,52 @@
       </span>
     </div>
 
-    <div class="row">
-      <div class="column">
-        <h4>{{ detailsTitle }}</h4>
-        <span
-          ><h5>Director:</h5>
-          <h6>{{ selectedFilm.director }}</h6>
-          <br />
-          <h5>Producer:</h5>
-          <h6>{{ selectedFilm.producer }}</h6>
-          <br />
-          <h5>ReleaseDate:</h5>
-          <h6>{{ selectedFilm.release_date }}</h6>
-        </span>
-        <h6>{{ selectedFilm.opening_crawl }}</h6>
-      </div>
-      <div class="column"></div>
-      <div class="column">
-        <img src="/assets/Filme-img/Unbenannt.png" alt="details-img" />
+    <div class="container">
+      <div class="row">
+        <div class="top col-md-4 align-items-stretch">
+          <span>
+            <h4>{{ detailsTitle }}</h4>
+            <h5>Director:</h5>
+            <h6>{{ selectedFilm.director }}</h6>
+
+            <br />
+
+            <h5>Producer:</h5>
+            <h6>{{ selectedFilm.producer }}</h6>
+            <br />
+            <h5>ReleaseDate:</h5>
+            <h6>{{ selectedFilm.release_date }}</h6>
+            <br />
+            <br />
+            <h6 style="font-size: 12px">{{ selectedFilm.opening_crawl }}</h6>
+          </span>
+        </div>
+        <div class="down col-md-4 ml-auto">
+          <img
+            class="img-fluid"
+            src="/assets/Filme-img/Unbenannt.png"
+            alt="details-img"
+          />
+        </div>
       </div>
     </div>
+
     <p>Charaktere:</p>
-    <div class="mat-button-row">
-      <a
-        class="mat-raised-button"
-        mat-raised-button
-        *ngFor="let character of selectedFilm.characterDetails | slice: 0:5"
-        [href]="character.url"
-        >{{ character.name }}</a
-      >
-      <button class="mat-dott-button" mat-raised-button>...</button>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between" class="fxLayout">
+      <div class="mat-button-row">
+        <a
+          class="mat-raised-button"
+          mat-raised-button
+          *ngFor="let character of selectedFilm.characterDetails | slice: 0:5"
+          [href]="character.url"
+          >{{ character.name }}</a
+        >
+        <button class="mat-dott-button" mat-raised-button>...</button>
+      </div>
     </div>
 
     <!-- to go back to main page make below code uncomment -->
     <!-- <button (click)="onHideDetail()"></button> -->
+    <!-- </div> -->
   </div>
 </div>

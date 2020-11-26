@@ -52,43 +52,42 @@
   width: 53px;
   height: 0px;
 }
-.row .column span h4 {
-  text-align: left;
+
+.container .row .top span h4 {
   font: normal normal bold 25px/23px Roboto;
   letter-spacing: 0px;
   color: #10172c;
 }
 
-.row .column span h5 {
-  display: inline;
+.container .row .top span h5 {
   font: normal normal bold 18px/23px Roboto;
+  letter-spacing: 0px;
   color: #10172c;
-}
-
-.row .column span h6 {
   display: inline;
+}
+
+.container .row .top span h6 {
   font: normal normal normal 18px/23px Roboto;
+  letter-spacing: 0px;
   color: #10172c;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+  display: inline;
 }
 
 .mat-button-row .mat-raised-button {
   border-radius: 1px;
   background-color: #bbbbbb;
   margin-right: 15px;
+}
+
+.fxLayout .mat-button-row {
+  padding-bottom: 50px;
+  padding-left: 10px;
+}
+
+p {
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+  padding-left: 10px;
 }
