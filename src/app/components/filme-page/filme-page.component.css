@@ -57,6 +57,7 @@
   font: normal normal bold 25px/23px Roboto;
   letter-spacing: 0px;
   color: #10172c;
+  margin-bottom: 5px;
 }
 
 .container .row .top span h5 {
@@ -64,6 +65,7 @@
   letter-spacing: 0px;
   color: #10172c;
   display: inline;
+  margin: 1px;
 }
 
 .container .row .top span h6 {
