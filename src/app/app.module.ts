@@ -1,3 +1,4 @@
+import { ModalModule } from './components/modal/modal.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,6 +37,7 @@ import { ModalComponent } from './components/modal/modal.component';
     MatButtonModule,
     MatGridListModule,
     MatDialogModule,
+    ModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
