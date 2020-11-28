@@ -1,3 +1,4 @@
+import { ModalService } from './../modal/modal.service';
 import { detailsTitle, showMore } from './../../app.component';
 import { dissolve } from './../../animations';
 import { SwapiDataService } from './../../swapi-data.service';
@@ -20,7 +21,10 @@ export class FilmePageComponent implements OnInit {
   detailsTitle = detailsTitle;
   showMore = showMore;
 
-  constructor(private dataService: SwapiDataService) {}
+  constructor(
+    private dataService: SwapiDataService,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit() {
     this.dataService.getAllFilms().subscribe((data: any) => {
@@ -47,5 +51,13 @@ export class FilmePageComponent implements OnInit {
   onHideDetail function to go back to main page and hide details*/
   onHideDetail() {
     this.showDetail = false;
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }

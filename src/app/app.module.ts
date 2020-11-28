@@ -15,7 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ModalComponent } from './components/modal/modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { ModalComponent } from './components/modal/modal.component';
     CharakterePageComponent,
     PlanetenPageComponent,
     FooterComponent,
-    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +37,7 @@ import { ModalComponent } from './components/modal/modal.component';
     MatGridListModule,
     MatDialogModule,
     ModalModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
