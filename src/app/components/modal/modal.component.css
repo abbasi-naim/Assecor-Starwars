@@ -40,7 +40,7 @@ jw-modal .jw-modal-background {
 
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
-  opacity: 1;
+  opacity: 0.85;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   /* z-index must be below .jw-modal and above everything else  */

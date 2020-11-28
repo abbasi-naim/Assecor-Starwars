@@ -12,6 +12,7 @@ import {
   selector: 'jw-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string;

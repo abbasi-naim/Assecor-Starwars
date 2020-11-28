@@ -94,6 +94,7 @@
           mat-raised-button
           *ngFor="let character of selectedFilm.characterDetails | slice: 0:5"
           [href]="character.url"
+          target="_blank"
           >{{ character.name }}</a
         >
         <button
@@ -106,7 +107,7 @@
       </div>
     </div>
 
-    <jw-modal id="custom-modal-1">
+    <jw-modal id="custom-modal-1" *ngIf="showDetail">
       <h1>Charakter hinzufügun</h1>
       <h1>
         lastName:
@@ -131,3 +132,23 @@
     <!-- </div> -->
   </div>
 </div>
+
+<jw-modal id="custom-modal-1" *ngIf="showDetail">
+  <h1>Charakter hinzufügun</h1>
+  <h1>
+    lastName:
+    <input type="text" placeholder="Name" />
+  </h1>
+  <h1>
+    Name: <input type="text" placeholder="Name" /> grose:
+    <input type="text" placeholder="grose" />
+  </h1>
+  <button
+    class="close-btn"
+    mat-raised-button
+    (click)="closeModal('custom-modal-1')"
+  >
+    Close
+  </button>
+  <button mat-raised-button>characterePage</button>
+</jw-modal>
