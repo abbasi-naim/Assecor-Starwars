@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     CharakterePageComponent,
     PlanetenPageComponent,
     FooterComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
