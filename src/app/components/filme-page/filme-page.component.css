@@ -119,7 +119,132 @@ p {
   padding-top: 5px;
 }
 
-button.mat-raised-button {
-  border-radius: 1px;
-  background-color: #bbbbbb;
+button.close-btn.mat-raised-button {
+  background: #f1f1f1 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  margin: 15px;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+button.Charakter-hinzufügen-btn.mat-raised-button {
+  background: #10172c 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+span.both-btn {
+  float: right;
+}
+
+h2.Charakter-hinzufügen-title {
+  text-align: center;
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+label.Charakter-hinzufügen-name {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+.form-row .col label {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+h2.Charakter-hinzufügen-title {
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+.form-row input {
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+  width: 230px;
+  height: 60px;
+}
+
+.form-row input.color-gelb {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 2px solid #d6d6d6;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.container .row .col-md-6 label {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+.row .col small {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+  margin-left: 5px;
+}
+
+.row .col input {
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+  text-align: left;
+  font: normal normal normal 14px/21px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  opacity: 1;
+}
+
+.row .col .Charakter-hinzufügen-title {
+  padding-top: 15px;
+}
+
+button.btn-close {
+  background: #f1f1f1 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+button.btn-to-character {
+  background: #10172c 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.both-btn {
+  padding-bottom: 15px;
 }
