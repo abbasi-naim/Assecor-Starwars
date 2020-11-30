@@ -59,4 +59,32 @@ export class PlanetenPageComponent implements OnInit {
   closeModal(id: string) {
     this.modalService.close(id);
   }
+
+  //Here is to add palnetType and createdBy to datalist to show in input filed
+  public planetValue: string;
+  public createdValue: string;
+
+  planetTypeList = [
+    { id: 1, name: 'forests' },
+    { id: 2, name: 'desert' },
+    { id: 3, name: 'ocean' },
+    { id: 4, name: 'grasslands' },
+  ];
+
+  createdByList = [
+    { id: 1, name: 'George Lucas' },
+    { id: 2, name: 'Rick McCallum' },
+    { id: 3, name: 'Gary Kurtz' },
+    { id: 4, name: 'Howard' },
+  ];
+
+  public savePlanet(e): void {
+    let name = e.target.value;
+    let list = this.planetTypeList.filter((x) => x.name === name)[0];
+  }
+
+  public saveCreatedBy(e): void {
+    let name = e.target.value;
+    let list = this.createdByList.filter((x) => x.name === name)[0];
+  }
 }

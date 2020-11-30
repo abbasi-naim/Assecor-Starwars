@@ -57,4 +57,19 @@ export class CharakterePageComponent implements OnInit {
   closeModal(id: string) {
     this.modalService.close(id);
   }
+
+  //Here is to add producers to datalist to show in input filed
+  public producerValue: string;
+
+  producerList = [
+    { id: 1, name: 'George Lucas' },
+    { id: 2, name: 'Rick McCallum' },
+    { id: 3, name: 'Gary Kurtz' },
+    { id: 4, name: 'Howard' },
+  ];
+
+  public saveProducer(e): void {
+    let name = e.target.value;
+    let list = this.producerList.filter((x) => x.name === name)[0];
+  }
 }

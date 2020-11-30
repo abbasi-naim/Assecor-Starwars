@@ -182,10 +182,15 @@
               class="form-control"
               placeholder="Gelb"
               value="#FFFF00"
-              list="codes"
-              [(ngModel)]="colorValue"
-              (change)="saveColor($event)"
+              list="augenColor"
+              [(ngModel)]="augenValue"
+              (change)="saveAugenColor($event)"
             />
+            <datalist id="augenColor">
+              <option *ngFor="let c of augenColorList" [value]="c.name">
+                {{ c.name }}
+              </option>
+            </datalist>
           </div>
         </div>
         <!-- Grid column -->
@@ -218,11 +223,11 @@
               class="form-control"
               placeholder="Gelb"
               value="#FFFF00"
-              list="codes"
+              list="colors"
               [(ngModel)]="colorValue"
               (change)="saveColor($event)"
             />
-            <datalist id="codes">
+            <datalist id="colors">
               <option *ngFor="let c of colorList" [value]="c.name">
                 {{ c.name }}
               </option>

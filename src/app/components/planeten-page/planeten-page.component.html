@@ -162,7 +162,15 @@
                 color: #00305a;
                 font: normal normal normal 16px/22px Circular Std;
               "
+              list="planetType"
+              [(ngModel)]="planetValue"
+              (change)="savePlanet($event)"
             />
+            <datalist id="planetType">
+              <option *ngFor="let c of planetTypeList" [value]="c.name">
+                {{ c.name }}
+              </option>
+            </datalist>
           </div>
         </div>
         <!-- Grid column -->
@@ -183,7 +191,15 @@
                 color: #00305a;
                 font: normal normal normal 16px/22px Circular Std;
               "
+              list="createdBy"
+              [(ngModel)]="createdValue"
+              (change)="saveCreatedBy($event)"
             />
+            <datalist id="createdBy">
+              <option *ngFor="let c of createdByList" [value]="c.name">
+                {{ c.name }}
+              </option>
+            </datalist>
           </div>
         </div>
         <!-- Grid column -->

@@ -120,6 +120,8 @@
       </div>
     </div>
 
+    <!-- open film modal on character page-->
+
     <jw-modal id="custom-modal-2" *ngIf="showDetail" [@Tap]>
       <!-- Material form grid -->
       <!-- <form> -->
@@ -172,7 +174,15 @@
                 color: #00305a;
                 font: normal normal normal 16px/22px Circular Std;
               "
+              list="producers"
+              [(ngModel)]="producerValue"
+              (change)="saveProducer($event)"
             />
+            <datalist id="producers">
+              <option *ngFor="let c of producerList" [value]="c.name">
+                {{ c.name }}
+              </option>
+            </datalist>
           </div>
         </div>
         <!-- Grid column -->
