@@ -267,3 +267,8 @@ button.btn-to-character {
 .both-btn {
   padding-bottom: 15px;
 }
+
+/* to Remove the Underline from Links*/
+a:hover {
+  text-decoration: none;
+}

@@ -306,3 +306,8 @@ button.btn-to-film {
 .container .row .down {
   padding-top: 46px;
 }
+
+/* to Remove the Underline from Links*/
+a:hover {
+  text-decoration: none;
+}

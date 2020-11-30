@@ -108,6 +108,15 @@
           target="_blank"
           >{{ film.title }}</a
         >
+
+        <p>Planeten:</p>
+        <a
+          class="mat-raised-button"
+          mat-raised-button
+          [href]="selectedPlanet.url"
+          target="_blank"
+          >{{ selectedPlanet.name }}</a
+        >
         <button
           class="mat-dott-button"
           mat-raised-button

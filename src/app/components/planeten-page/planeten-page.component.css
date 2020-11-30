@@ -113,6 +113,21 @@ p {
   padding-left: 10px;
 }
 
+/* to style planet button and text on the bottom */
+.mat-button-row p {
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+  padding-left: 0px;
+  padding-top: 5px;
+}
+
+/* to Remove the Underline from Links*/
+a:hover {
+  text-decoration: none;
+}
+
 .dot {
   height: 11px;
   width: 11px;
