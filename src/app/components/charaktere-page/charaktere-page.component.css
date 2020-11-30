@@ -165,7 +165,7 @@ span.both-btn {
   float: right;
 }
 
-h2.Charakter-hinzufügen-title {
+h2.film-hinzufügen-title {
   text-align: center;
   font: normal normal bold 25px/30px Roboto;
   letter-spacing: 0px;
@@ -173,7 +173,7 @@ h2.Charakter-hinzufügen-title {
   opacity: 1;
 }
 
-label.Charakter-hinzufügen-name {
+label.film-hinzufügen-name {
   text-align: left;
   font: normal normal medium 14px/31px Roboto;
   letter-spacing: 0px;
@@ -188,7 +188,7 @@ label.Charakter-hinzufügen-name {
   color: #00305a;
   opacity: 1;
 }
-h2.Charakter-hinzufügen-title {
+h2.film-hinzufügen-title {
   font: normal normal bold 25px/30px Roboto;
   letter-spacing: 0px;
   color: #10172c;
@@ -227,7 +227,16 @@ h2.Charakter-hinzufügen-title {
   margin-left: 5px;
 }
 
-.row .col input {
+.row .col-6 small {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+  margin-left: 5px;
+}
+
+.row .col-6 input {
   background: #f1f1f180 0% 0% no-repeat padding-box;
   border: 2px solid #d0d0d080;
   opacity: 1;
@@ -238,7 +247,29 @@ h2.Charakter-hinzufügen-title {
   opacity: 1;
 }
 
-.row .col .Charakter-hinzufügen-title {
+.row .col input {
+  text-align: left;
+  font: normal normal normal 14px/21px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  opacity: 1;
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+}
+
+.row .col textarea {
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+  text-align: left;
+  font: normal normal normal 14px/21px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  opacity: 1;
+}
+
+.row .col .film-hinzufügen-title {
   padding-top: 15px;
 }
 
@@ -253,7 +284,7 @@ button.btn-close {
   opacity: 1;
 }
 
-button.btn-to-character {
+button.btn-to-film {
   background: #10172c 0% 0% no-repeat padding-box;
   border-radius: 2px;
   opacity: 1;

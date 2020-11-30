@@ -124,15 +124,15 @@
       <!-- <form> -->
       <div class="row">
         <div class="col">
-          <h2 class="Charakter-hinzufügen-title">Charakter hinzufügen</h2>
+          <h2 class="film-hinzufügen-title">Film hinzufügen</h2>
           <!-- Material input -->
           <div class="md-form mt-0">
-            <small>Name</small>
+            <small>Titel</small>
             <input
               mdbInput
               type="text"
               class="form-control"
-              placeholder="Name eingeben"
+              placeholder="Titel eingeben"
             />
           </div>
         </div>
@@ -144,58 +144,12 @@
         <div class="col py-2">
           <!-- Material input -->
           <div class="md-form mt-0">
-            <small>Große</small>
-            <input
-              mdbInput
-              type="number"
-              class="form-control"
-              placeholder="Meter"
-            />
-          </div>
-        </div>
-        <!-- Grid column -->
-
-        <div class="col py-2">
-          <!-- Material input -->
-          <div class="md-form mt-0">
-            <small>Gweicht</small>
-            <input
-              mdbInput
-              type="number"
-              class="form-control"
-              placeholder="Kg"
-            />
-          </div>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <div class="row">
-        <!-- Grid column -->
-        <div class="col py-2">
-          <!-- Material input -->
-          <div class="md-form mt-0">
-            <small>Haarfarbe</small>
+            <small>Director</small>
             <input
               mdbInput
               type="text"
               class="form-control"
-              placeholder="Haarfarbe eingeben"
-            />
-          </div>
-        </div>
-        <!-- Grid column -->
-
-        <div class="col py-2">
-          <!-- Material input -->
-          <div class="md-form mt-0">
-            <small>Augenfarbe</small>
-            <input
-              mdbInput
-              type="color"
-              style="background-color: #ffffff"
-              class="form-control"
-              placeholder="Gelb"
-              value="#FFFF00"
+              placeholder="Adresszusatz eingeben"
             />
           </div>
         </div>
@@ -204,36 +158,57 @@
       <div class="row">
         <!-- Grid column -->
         <div class="col py-2">
+          <!-- Material input -->
+          <div class="md-form mt-0">
+            <small>Producent</small>
+            <input
+              mdbInput
+              type="text"
+              class="form-control"
+              placeholder="George Lucas"
+              style="
+                background-color: #ffffff;
+                color: #00305a;
+                font: normal normal normal 16px/22px Circular Std;
+              "
+            />
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-6 py-2">
           <!-- Material input -->
           <div class="md-form mt-0">
             <small>Geburtsjahr</small>
             <input
               mdbInput
-              type="date"
+              type="text"
               class="form-control"
               placeholder="YYYY"
-              [max]="2021"
-            />
-          </div>
-        </div>
-        <!-- Grid column -->
-
-        <div class="col py-2">
-          <!-- Material input -->
-          <div class="md-form mt-0">
-            <small>Geschlecht</small>
-            <input
-              mdbInput
-              type="color"
-              style="background-color: #ffffff"
-              class="form-control"
-              placeholder="Gelb"
-              value="#FFFF00"
             />
           </div>
         </div>
         <!-- Grid column -->
       </div>
+
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col py-2">
+          <!-- Material input -->
+          <div class="md-form mt-0">
+            <small>Beschreibung</small>
+            <textarea
+              class="form-control"
+              rows="2"
+              placeholder="Beschreibung"
+            ></textarea>
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+
       <div class="row">
         <div class="col py-2 d-flex justify-content-end">
           <!-- Material input -->
@@ -247,7 +222,7 @@
               Abbrechen
             </button>
             <button mat-raised-button routerLink="/film" class="btn-to-film">
-              Charakter hinzufügen
+              Film hinzufügen
             </button>
           </div>
         </div>
