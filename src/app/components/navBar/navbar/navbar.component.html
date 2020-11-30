@@ -24,7 +24,12 @@
     <!-- add data-toggle and data-target in order to auto close navbar in small screen-->
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!--add min-height style in order to prevent from bliking nav bar link-->
+  <div
+    class="collapse navbar-collapse"
+    id="navbarSupportedContent"
+    style="min-height: 50px"
+  >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <span class="starwars">
@@ -81,12 +86,14 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <div class="input-group">
-        <input class="form-control border-right-1" placeholder="search" />
-        <span class="input-group-append bg-white">
+        <label>
+          <input class="form-control border-right-1" placeholder="search" />
+        </label>
+        <!-- <span class="input-group-append bg-white">
           <button class="btn" type="button">
             <fa-icon [icon]="faSearch" class="fa-spin"></fa-icon>
           </button>
-        </span>
+        </span> -->
       </div>
     </form>
   </div>
