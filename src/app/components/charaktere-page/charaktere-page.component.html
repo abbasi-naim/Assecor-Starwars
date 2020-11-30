@@ -58,19 +58,28 @@
         <div class="top col-md-4 align-items-stretch">
           <span>
             <h4>{{ detailsTitle }}</h4>
-            <h5>Director:</h5>
-            <h6>{{ selectedCharacter.gender }}</h6>
+            <h5>Gröse:</h5>
+            <h6>{{ selectedCharacter.height / 100 }}m</h6>
 
             <br />
 
-            <h5>Producer:</h5>
+            <h5>Gewicht:</h5>
+            <h6>{{ selectedCharacter.mass }}kg</h6>
+            <br />
+            <h5>Haarfarbe:</h5>
             <h6>{{ selectedCharacter.hair_color }}</h6>
             <br />
-            <h5>ReleaseDate:</h5>
+            <h5>Augenfarbe:</h5>
+            <h6>{{ selectedCharacter.eye_color }}</h6>
+            <br />
+            <h5>Geburtsjahr:</h5>
             <h6>{{ selectedCharacter.birth_year }}</h6>
             <br />
+            <h5>Geschlecht:</h5>
+            <h6>{{ selectedCharacter.gender }}</h6>
             <br />
-            <h6 style="font-size: 12px">{{ selectedCharacter.eye_color }}</h6>
+            <br />
+            <!-- <h6 style="font-size: 12px">{{ selectedCharacter.eye_color }}</h6> -->
           </span>
         </div>
         <div class="down col-md-4 ml-auto">

@@ -267,3 +267,11 @@ button.btn-to-character {
 .both-btn {
   padding-bottom: 15px;
 }
+
+.container .row .top {
+  padding-top: 46px;
+}
+
+.container .row .down {
+  padding-top: 46px;
+}
