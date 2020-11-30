@@ -60,4 +60,20 @@ export class FilmePageComponent implements OnInit {
   closeModal(id: string) {
     this.modalService.close(id);
   }
+
+  //Here is to add colors to datalist to show in input filed
+  public colorValue: string;
+
+  colorList = [
+    { id: 1, name: 'Gelb', hexCode: '#FFFF00' },
+    { id: 2, name: 'Rot', hexCode: '#FF0000' },
+    { id: 3, name: 'Orange', hexCode: '#FF5733' },
+    { id: 4, name: 'blau', hexCode: '#0000FF' },
+    { id: 5, name: 'Grün', hexCode: '#008000' },
+  ];
+
+  public saveColor(e): void {
+    let name = e.target.value;
+    let list = this.colorList.filter((x) => x.name === name)[0];
+  }
 }
