@@ -1,3 +1,4 @@
+import { ModalService } from './../modal/modal.service';
 import { detailsTitle, showMore } from './../../app.component';
 import { dissolve } from './../../animations';
 import { SwapiDataService } from './../../swapi-data.service';
@@ -14,9 +15,13 @@ export class CharakterePageComponent implements OnInit {
   showDetail = false;
   selectedCharacter = { filmDetails: [] };
   pageTitel = 'Charaktere';
+  detailPageTitle = 'Characterdeatils';
   detailsTitle = detailsTitle;
   showMore = showMore;
-  constructor(private dataService: SwapiDataService) {}
+  constructor(
+    private dataService: SwapiDataService,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit() {
     this.dataService.getAllCharacters().subscribe((data: any) => {
@@ -24,6 +29,7 @@ export class CharakterePageComponent implements OnInit {
       this.characters = data.results;
     });
   }
+  // when more button on every cards clicked it calls onShowDetail function to show details
   onShowDetail(t) {
     let filmDetails = [];
     this.selectedCharacter = t;
@@ -35,9 +41,20 @@ export class CharakterePageComponent implements OnInit {
       });
     });
     this.selectedCharacter.filmDetails = filmDetails;
-    console.log(this.selectedCharacter.filmDetails);
+    //add this code to not showing page titel on details page
+    this.pageTitel = '';
   }
+  /*when hide button on datails page clicked it calls 
+  onHideDetail function to go back to main page and hide details*/
   onHideDetail() {
     this.showDetail = false;
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }
