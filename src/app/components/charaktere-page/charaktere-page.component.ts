@@ -15,6 +15,7 @@ export class CharakterePageComponent implements OnInit {
   showDetail = false;
   selectedCharacter = { filmDetails: [] };
   pageTitel = 'Charaktere';
+  //to show on the top of details page
   detailPageTitle = 'Characterdeatils';
   detailsTitle = detailsTitle;
   showMore = showMore;
@@ -23,6 +24,7 @@ export class CharakterePageComponent implements OnInit {
     private modalService: ModalService
   ) {}
 
+  //get data from API -- retrieve all data related to endpoint
   ngOnInit() {
     this.dataService.getAllCharacters().subscribe((data: any) => {
       console.log(data);

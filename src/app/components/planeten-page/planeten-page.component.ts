@@ -15,6 +15,7 @@ export class PlanetenPageComponent implements OnInit {
   showDetail = false;
   selectedPlanet = { filmDetails: [] };
   pageTitel = 'Planeten';
+  //to show on the top of details page
   detailPageTitle = 'Planetendeatils';
   detailsTitle = detailsTitle;
   showMore = showMore;
@@ -24,14 +25,14 @@ export class PlanetenPageComponent implements OnInit {
     private modalService: ModalService
   ) {}
 
-  //retrieve all data related to endpoint
+  //get data from API -- retrieve all data related to endpoint
   ngOnInit() {
     this.dataService.getAllPlanets().subscribe((data: any) => {
       console.log(data);
       this.planets = data.results;
     });
   }
-  //Add details for each planet
+  // when more button on every cards clicked it calls onShowDetail function to show details
   onShowDetail(t) {
     let filmDetails = [];
     this.selectedPlanet = t;
