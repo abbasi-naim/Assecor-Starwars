@@ -45,15 +45,194 @@
     </div>
   </div>
 
-  <div *ngIf="showDetail" [@Tap]>
-    <p>{{ selectedPlanet.name }}</p>
-    <p>{{ detailsTitle }}</p>
-    <a
-      class="btn btn-primary btn-sm"
-      *ngFor="let film of selectedPlanet.filmDetails"
-      [href]="film.url"
-      >{{ film.title }}</a
-    >
-    <button (click)="onHideDetail()"></button>
+  <div *ngIf="showDetail" [@Tap] class="container">
+    <div class="top-details text-center">
+      <span>
+        <h4>{{ detailPageTitle }}</h4>
+        <hr />
+        <h1>{{ selectedPlanet.name }}</h1>
+      </span>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="top col-md-4 align-items-stretch">
+          <span>
+            <h4>{{ detailsTitle }}</h4>
+            <h5>Diameter:</h5>
+            <h6>{{ selectedPlanet.diameter }}</h6>
+            <br />
+            <h5>Climate:</h5>
+            <h6>{{ selectedPlanet.climate }}</h6>
+            <br />
+            <h5>Rotation Period:</h5>
+            <h6>{{ selectedPlanet.rotation_period }}</h6>
+            <br />
+            <h5>Population:</h5>
+            <h6>{{ selectedPlanet.population / 1000000000 }}m</h6>
+            <br />
+            <h5>Gravity:</h5>
+            <h6>{{ selectedPlanet.gravity }}</h6>
+            <br />
+            <h5>Surface Water:</h5>
+            <h6>{{ selectedPlanet.surface_water }}</h6>
+            <br />
+            <br />
+          </span>
+        </div>
+
+        <div class="down col-md-4 ml-auto">
+          <img
+            class="img-fluid"
+            src="/assets/Planeten-img/Unbenannt.png"
+            alt="details-img"
+          />
+          <div class="img-dot">
+            <!-- added fontAwesome for el>
+            <i class="fa fa-ellipsis-h fa-3x"></i> -->
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Filme:</p>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between" class="fxLayout">
+      <div class="mat-button-row">
+        <a
+          class="mat-raised-button"
+          mat-raised-button
+          *ngFor="let film of selectedPlanet.filmDetails"
+          [href]="film.url"
+          target="_blank"
+          >{{ film.title }}</a
+        >
+        <button
+          class="mat-dott-button"
+          mat-raised-button
+          (click)="openModal('custom-modal-3')"
+        >
+          ...
+        </button>
+      </div>
+    </div>
+    <jw-modal id="custom-modal-3" *ngIf="showDetail" [@Tap]>
+      <!-- Material form grid -->
+      <!-- <form> -->
+      <div class="row">
+        <div class="col">
+          <h2 class="planet-hinzufügen-title">Planet hinzufügen</h2>
+          <!-- Material input -->
+          <div class="md-form mt-0">
+            <small>Name</small>
+            <input
+              mdbInput
+              type="text"
+              class="form-control"
+              placeholder="Name eingeben"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col py-2">
+          <!-- Material input -->
+          <div class="md-form mt-0">
+            <small>Type</small>
+            <input
+              mdbInput
+              type="text"
+              class="form-control"
+              placeholder="Desert planet"
+              style="
+                background-color: #ffffff;
+                color: #00305a;
+                font: normal normal normal 16px/22px Circular Std;
+              "
+            />
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col py-2">
+          <!-- Material input -->
+          <div class="md-form mt-0">
+            <small>Created by</small>
+            <input
+              mdbInput
+              type="text"
+              class="form-control"
+              placeholder="George Lucas"
+              style="
+                background-color: #ffffff;
+                color: #00305a;
+                font: normal normal normal 16px/22px Circular Std;
+              "
+            />
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-6 py-2">
+          <!-- Material input -->
+          <div class="md-form mt-0">
+            <small>Genre</small>
+            <input
+              mdbInput
+              type="text"
+              class="form-control"
+              placeholder="Science fiction"
+            />
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col py-2">
+          <!-- Material input -->
+          <div class="md-form mt-0">
+            <small>Race(s)</small>
+            <textarea
+              class="form-control"
+              rows="2"
+              placeholder="Namen mit Semikolon trennen"
+            ></textarea>
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+
+      <div class="row">
+        <div class="col py-2 d-flex justify-content-end">
+          <!-- Material input -->
+          <div class="both-btn md-form mt-0">
+            <button
+              mat-raised-button
+              class="btn-close"
+              style="margin: 10px"
+              (click)="closeModal('custom-modal-3')"
+            >
+              Abbrechen
+            </button>
+            <button mat-raised-button routerLink="/film" class="btn-to-film">
+              Film hinzufügen
+            </button>
+          </div>
+        </div>
+      </div>
+    </jw-modal>
+
+    <!-- to go back to main page make below code uncomment -->
+    <!-- <button (click)="onHideDetail()"></button> -->
   </div>
 </div>

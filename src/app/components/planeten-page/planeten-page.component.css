@@ -1,4 +1,20 @@
-.text-center .title {
+h5.card-title {
+  text-align: left;
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+.card-body span.card-text {
+  text-align: left;
+  font: normal normal normal 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+span.title {
   top: 280px;
   left: 867px;
   width: 186px;
@@ -27,6 +43,266 @@
 }
 
 .text-muted {
-  color: #10172c !important;
+  text-align: left;
   font: normal normal bold 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+.top-details span h4 {
+  align-content: center;
+  font: normal normal 300 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+.top-details span h1 {
+  text-align: center;
+  font: normal normal bold 30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+.top-details span hr {
+  border: 1px solid #10172c;
+  top: 271px;
+  width: 53px;
+  height: 0px;
+}
+
+.container .row .top span h4 {
+  font: normal normal bold 25px/23px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  margin-bottom: 5px;
+}
+
+.container .row .top span h5 {
+  font: normal normal bold 18px/23px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  display: inline;
+  margin: 1px;
+}
+
+.container .row .top span h6 {
+  font: normal normal normal 18px/23px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  display: inline;
+}
+
+.mat-button-row .mat-raised-button {
+  border-radius: 1px;
+  background-color: #bbbbbb;
+  margin-right: 15px;
+}
+
+.fxLayout .mat-button-row {
+  padding-bottom: 50px;
+  padding-left: 10px;
+}
+
+p {
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+  padding-left: 10px;
+}
+
+.dot {
+  height: 11px;
+  width: 11px;
+  background: #4040406e 0% 0% no-repeat padding-box;
+  opacity: 0.43;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px;
+}
+
+.dot:first-child {
+  height: 11px;
+  width: 11px;
+  background: #b88282 0% 0% no-repeat padding-box;
+  opacity: 0.47;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.img-dot {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5px;
+}
+
+button.close-btn.mat-raised-button {
+  background: #f1f1f1 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  margin: 15px;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+button.Charakter-hinzufügen-btn.mat-raised-button {
+  background: #10172c 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+span.both-btn {
+  float: right;
+}
+
+h2.planet-hinzufügen-title {
+  text-align: center;
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+label.film-hinzufügen-name {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+.form-row .col label {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+h2.planet-hinzufügen-title {
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+.form-row input {
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+  width: 230px;
+  height: 60px;
+}
+
+.form-row input.color-gelb {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 2px solid #d6d6d6;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.container .row .col-md-6 label {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+.row .col small {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+  margin-left: 5px;
+}
+
+.row .col-6 small {
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+  margin-left: 5px;
+}
+
+.row .col-6 input {
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+  text-align: left;
+  font: normal normal normal 14px/21px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  opacity: 1;
+}
+
+.row .col input {
+  text-align: left;
+  font: normal normal normal 14px/21px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  opacity: 1;
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+}
+
+.row .col textarea {
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  border: 2px solid #d0d0d080;
+  opacity: 1;
+  text-align: left;
+  font: normal normal normal 14px/21px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  opacity: 1;
+}
+
+.row .col .planet-hinzufügen-title {
+  padding-top: 15px;
+}
+
+button.btn-close {
+  background: #f1f1f1 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+}
+
+button.btn-to-film {
+  background: #10172c 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  text-align: center;
+  font: normal normal medium 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.both-btn {
+  padding-bottom: 15px;
+}
+
+.container .row .top {
+  padding-top: 46px;
+}
+
+.container .row .down {
+  padding-top: 46px;
 }
