@@ -321,3 +321,17 @@ button.btn-to-film {
 .container .row .down {
   padding-top: 46px;
 }
+
+@media screen and (max-width: 796px) {
+  span.title {
+    top: 280px;
+    left: 867px;
+    width: 186px;
+    height: 90px;
+    text-align: left;
+    font: normal normal bold 25px Roboto;
+    letter-spacing: 0px;
+    color: #10172c;
+    opacity: 1;
+  }
+}
