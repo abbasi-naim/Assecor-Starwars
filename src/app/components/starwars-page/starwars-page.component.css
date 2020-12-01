@@ -3,3 +3,14 @@ div {
   padding-left: 0px;
   padding-right: 0px;
 }
+
+/* .flex-rectangle {
+  width: 99%;
+  background: #10172c;
+  overflow-y: hidden;
+}
+.flex-rectangle:before {
+  content: "";
+  display: block;
+  padding-top: 4%;
+} */
