@@ -1,6 +1,8 @@
 # AssecorFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+<br/>
+note : you should migrate from version 11 to 13 at the moment date which is 3.22.2022.
 
 This is a simple web application, which visualizes the API data. and used SWAPI API
 to retrieve Data and it shows list of movies, characters, planets, and then you can
